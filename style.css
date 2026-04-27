@@ -4,44 +4,63 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #fff7fb;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #fdf8fb;
   color: #333;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 nav {
-  background-color: #4a002a;
-  color: white;
-  padding: 18px 50px;
+  background-color: white;
+  color: #4a002a;
+  padding: 18px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 }
 
 nav h2 {
-  font-size: 24px;
+  font-size: 26px;
+  color: #4a002a;
 }
 
 nav a {
-  color: white;
+  color: #4a002a;
   text-decoration: none;
-  margin-left: 15px;
-  font-weight: bold;
+  margin-left: 18px;
+  font-weight: 600;
   font-size: 14px;
 }
 
 nav a:hover {
-  color: #ffd6e8;
+  color: #d87ca3;
 }
 
 header {
-  background: linear-gradient(to right, #4a002a, #d87ca3);
+  background: linear-gradient(135deg, #4a002a, #a83f72, #f3b6cd);
   color: white;
   text-align: center;
-  padding: 100px 20px;
+  padding: 90px 20px;
+}
+
+.profile-img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
 
 header h1 {
@@ -54,32 +73,55 @@ header p {
 }
 
 section {
-  padding: 50px 70px;
+  padding: 60px 70px;
 }
 
 section h2 {
   color: #4a002a;
-  font-size: 32px;
-  margin-bottom: 20px;
+  font-size: 34px;
+  margin-bottom: 25px;
   text-align: center;
+  position: relative;
 }
 
-section p {
-  font-size: 17px;
+section h2::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background-color: #d87ca3;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+
+#profile p {
+  background-color: white;
+  max-width: 900px;
+  margin: auto;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.1);
+  font-size: 18px;
 }
 
 .card {
   background-color: white;
-  padding: 25px;
-  margin: 18px auto;
-  border-radius: 15px;
+  padding: 28px;
+  margin: 20px auto;
+  border-radius: 18px;
   max-width: 900px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+  box-shadow: 0 5px 18px rgba(0,0,0,0.1);
+  border-left: 6px solid #d87ca3;
 }
 
 .card h3 {
   color: #4a002a;
   margin-bottom: 8px;
+  font-size: 23px;
+}
+
+.card p {
+  font-size: 17px;
 }
 
 .skills {
@@ -90,21 +132,63 @@ section p {
 
 .skills span {
   display: inline-block;
-  background-color: #4a002a;
+  background: linear-gradient(135deg, #4a002a, #a83f72);
   color: white;
-  padding: 10px 18px;
+  padding: 11px 20px;
   margin: 8px;
   border-radius: 25px;
   font-size: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 #contact {
   text-align: center;
 }
 
+#contact p {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
 footer {
   background-color: #4a002a;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 22px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  nav {
+    padding: 15px 25px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  nav h2 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  nav a {
+    margin: 6px;
+    display: inline-block;
+  }
+
+  header h1 {
+    font-size: 36px;
+  }
+
+  header p {
+    font-size: 17px;
+  }
+
+  section {
+    padding: 45px 25px;
+  }
+
+  .profile-img {
+    width: 130px;
+    height: 130px;
+  }
 }
