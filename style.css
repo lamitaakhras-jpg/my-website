@@ -8,94 +8,98 @@ body {
   font-family: Arial, sans-serif;
   background-color: #fff7fb;
   color: #333;
+  line-height: 1.6;
 }
 
 nav {
   background-color: #4a002a;
   color: white;
-  padding: 20px 60px;
+  padding: 18px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 nav h2 {
-  font-size: 28px;
+  font-size: 24px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: 15px;
   font-weight: bold;
+  font-size: 14px;
 }
 
 nav a:hover {
   color: #ffd6e8;
 }
 
-.hero {
-  min-height: 80vh;
+header {
   background: linear-gradient(to right, #4a002a, #d87ca3);
   color: white;
   text-align: center;
-  padding: 150px 20px;
+  padding: 100px 20px;
 }
 
-.hero h1 {
-  font-size: 50px;
-  margin-bottom: 15px;
+header h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
 }
 
-.hero p {
-  font-size: 22px;
-  margin-bottom: 30px;
-}
-
-.btn {
-  background-color: white;
-  color: #4a002a;
-  padding: 14px 30px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
+header p {
+  font-size: 20px;
 }
 
 section {
-  padding: 70px 60px;
-  text-align: center;
+  padding: 50px 70px;
 }
 
 section h2 {
-  font-size: 35px;
   color: #4a002a;
+  font-size: 32px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 section p {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-.cards {
-  display: flex;
-  gap: 25px;
-  justify-content: center;
-  margin-top: 30px;
-  flex-wrap: wrap;
+  font-size: 17px;
 }
 
 .card {
   background-color: white;
-  width: 300px;
   padding: 25px;
-  border-radius: 18px;
+  margin: 18px auto;
+  border-radius: 15px;
+  max-width: 900px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.12);
 }
 
 .card h3 {
   color: #4a002a;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+}
+
+.skills {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.skills span {
+  display: inline-block;
+  background-color: #4a002a;
+  color: white;
+  padding: 10px 18px;
+  margin: 8px;
+  border-radius: 25px;
+  font-size: 15px;
+}
+
+#contact {
+  text-align: center;
 }
 
 footer {
